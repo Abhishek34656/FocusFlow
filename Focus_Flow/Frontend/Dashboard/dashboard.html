@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FocusFlow Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1f4c6e5b6f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <a href="#" class="active"><i class="fas fa-home"></i> Home</a>
+        <a href="#"><i class="fas fa-list-check"></i> To-Do</a>
+        <a href="#"><i class="fas fa-calendar-day"></i> Daily Notes</a>
+        <a href="#"><i class="fas fa-stopwatch"></i> Timer</a>
+        <a href="#"><i class="fas fa-chart-line"></i> Habits</a>
+        <a href="#"><i class="fas fa-th-large"></i> Widgets</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Top Navbar -->
+      <nav class="navbar">
+        <div class="navbar-brand">FocusFlow</div>
+        <div class="navbar-actions">
+          <button class="nav-btn" id="chatToggleBtn"><i class="fas fa-comments"></i> Chat</button>
+          <button class="nav-btn" id="loginBtn">Login</button>
+          <button class="nav-btn primary" id="signupBtn">Sign Up</button>
+          <button class="nav-btn" id="themeToggleBtn" title="Toggle Theme"><i class="fas fa-moon"></i></button>
+        </div>
+      </nav>
+
+      <!-- Workspace -->
+      <main class="workspace">
+        <section class="welcome-section">
+          <div class="icon"><i class="fas fa-rocket"></i></div>
+          <h1>Welcome to FocusFlow</h1>
+          <p>FocusFlow is built for students and professionals who want to boost productivity, stay focused online, and collaborate with teammates for projects, events, or hackathons.</p>
+        </section>
+      </main>
+    </div>
+
+    <!-- Right Chat Panel (Collapsible) -->
+    <aside class="chat-panel" id="chatPanel">
+      <div class="chat-header">Team Chat</div>
+      <div class="chat-members">
+        <span>🟢 Alex</span>
+        <span>🟢 Taylor</span>
+      </div>
+      <div class="chat-messages">
+        <div><b>Alex:</b> Hey team, let's get this done! 🚀</div>
+        <div><b>Taylor:</b> I'm on it.</div>
+      </div>
+      <div class="chat-input">
+        <input type="text" placeholder="Type a message...">
+        <button><i class="fas fa-paper-plane"></i></button>
+      </div>
+    </aside>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

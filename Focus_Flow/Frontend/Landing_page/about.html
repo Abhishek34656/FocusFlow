@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - FocusFlow</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .team {
+            padding: 5rem 5%;
+            text-align: center;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 3rem auto 0;
+        }
+        
+        .team-member {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            border: 3px solid var(--primary-color);
+        }
+        
+        .team-member h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        .team-member .role {
+            color: var(--text-color);
+            opacity: 0.8;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: var(--text-color);
+            font-size: 1.25rem;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        
+        .about-hero {
+            text-align: center;
+            padding: 8rem 5% 5rem;
+            background: linear-gradient(135deg, var(--bg-color) 0%, #e6e9ff 100%);
+        }
+        
+        .dark-theme .about-hero {
+            background: linear-gradient(135deg, #0f0c29 0%, #1a1a2e 100%);
+        }
+        
+        .about-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(90deg, var(--primary-color), #6c5ce7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .about-hero p {
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            font-size: 1.25rem;
+        }
+    </style>
+</head>
+<body class="dark-theme">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <h1 class="logo" aria-label="FocusFlow Logo">FocusFlow</h1>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#features">Features</a>
+            <a href="#">About</a>
+            <div class="dropdown">
+                <button class="dropbtn" aria-label="Social Media Links">Socials <i class="fas fa-chevron-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i> Facebook</a>
+                </div>
+            </div>
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="auth-buttons">
+                <button id="loginBtn" class="btn btn-outline" aria-label="Login">Login</button>
+                <button id="signupBtn" class="btn btn-primary" aria-label="Sign Up">Sign Up</button>
+            </div>
+        </div>
+        <button class="hamburger" aria-label="Open Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <h1>Meet Our Team</h1>
+        <p>We're a passionate group of developers and designers dedicated to helping you stay focused and productive in the digital age.</p>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team">
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Doe, Founder & Lead Developer">
+                <h3>John Doe</h3>
+                <span class="role">Founder & Lead Developer</span>
+                <p>John is passionate about building tools that help people be more productive and focused in their daily lives.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="John's Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="John's LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="John's GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            
+            <div class="team-member">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Team Member">
+                <h3>Jane Smith</h3>
+                <span class="role">UI/UX Designer</span>
+                <p>Jane creates beautiful and intuitive interfaces that make our extension a joy to use every day.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                </div>
+            </div>
+            
+            <div class="team-member">
+                <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Team Member">
+                <h3>Michael Johnson</h3>
+                <span class="role">Backend Developer</span>
+                <p>Michael ensures our systems are fast, reliable, and secure, handling all the complex backend operations.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="about" style="padding-top: 0;">
+        <div class="container">
+            <h2>Our Story</h2>
+            <p>FocusFlow was born out of our own struggles with digital distractions. As developers and designers, we found ourselves constantly battling against the pull of social media, news sites, and other online distractions that were eating into our productivity.</p>
+            <p>We tried various website blockers and productivity tools, but none of them quite fit our needs. They were either too restrictive, too complicated, or lacked the features we wanted. So we decided to build our own solution.</p>
+            <p>What started as a simple tool for personal use quickly grew into something much bigger. Friends and colleagues started asking if they could use it too, and before we knew it, we had a growing community of users who were benefiting from our extension.</p>
+            <p>Today, FocusFlow helps thousands of people around the world take control of their digital lives, stay focused on what matters, and achieve their goals with less stress and more joy.</p>
+            
+            <h2 style="margin-top: 3rem;">Our Mission</h2>
+            <p>Our mission is simple: to help people be more present, focused, and productive in an increasingly distracting world. We believe that technology should work for you, not against you.</p>
+            <p>We're committed to creating tools that are not only effective but also a joy to use. We believe that the best productivity tools are the ones you actually want to use every day.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h2 class="footer-logo">FocusFlow</h2>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="social-icons">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> FocusFlow. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Dynamically update the footer year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

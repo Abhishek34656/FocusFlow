@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow - Website Blocker & Productivity Tool</title>
+    <!-- Google Fonts: Poppins & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animate.min.css">
+</head>
+<body class="dark-theme">
+    <!-- Canvas for particle background -->
+    <div id="particle-canvas"></div>
+    <!-- Navigation -->
+    <nav class="navbar animate__animated animate__fadeInDown">
+        <div class="logo gradient-text">FocusFlow</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+            <div class="dropdown">
+                <button class="dropbtn">Socials <i class="fas fa-chevron-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i> Facebook</a>
+                </div>
+            </div>
+            <button id="themeToggle" class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="auth-buttons">
+                <button id="loginBtn" class="btn btn-outline">Login</button>
+                <button id="signupBtn" class="btn btn-primary">Sign Up</button>
+            </div>
+        </div>
+        <button class="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+<section id="home" class="hero animate__animated animate__fadeIn animate__delay-1s">
+    <canvas id="github-hero-canvas" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;"></canvas>
+        <div class="hero-content">
+            <h1 class="gradient-text animate__animated animate__fadeInUp animate__delay-1s">Take Control of Your Online Focus</h1>
+            <p class="animate__animated animate__fadeInUp animate__delay-2s">Block distracting websites, track your goals, and discover productive alternatives with our powerful browser extension.</p>
+            <div class="cta-buttons">
+                <button id="getStartedBtn" class="btn btn-primary pulse-glow">Get Started</button>
+                <button class="btn btn-outline">Learn More</button>
+            </div>
+        </div>
+        <div class="hero-image animate__animated animate__zoomIn animate__delay-2s">
+            <img src="https://www.voze.com/hubfs/How%20Voze%20Works-2.png" width="1000" height="1000" alt="FocusFlow in action">
+        </div>
+        <div class="floor"></div>
+        
+</section>
+
+    <!-- Features Section -->
+    <section id="features" class="features animate__animated animate__fadeInUp animate__delay-3s">
+        <h2 class="gradient-text">How It Works</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Block Distractions</h3>
+                <p>Easily block time-wasting websites and apps that distract you from your work.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h3>Set Goals</h3>
+                <p>Define your daily focus goals and track your progress in real-time.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h3>Smart Recommendations</h3>
+                <p>Discover new productive websites and resources tailored to your interests.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>We're a team of productivity enthusiasts dedicated to helping people take control of their digital lives. Our mission is to create tools that help you stay focused and achieve more.</p>
+        <a href="about.html" class="btn btn-outline">Meet the Team</a>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download">
+        <h2>Ready to Boost Your Productivity?</h2>
+        <p>Install FocusFlow now and take the first step towards a more focused digital life.</p>
+        <button id="downloadBtn" class="btn btn-primary">
+            <i class="fas fa-download"></i> Download Extension
+        </button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">FocusFlow</div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 FocusFlow. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Auth Modals -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login to Your Account</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <div class="form-group remember-me">
+                    <input type="checkbox" id="rememberMe">
+                    <label for="rememberMe">Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+                <p class="form-footer">Don't have an account? <a href="#" id="showSignup">Sign up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Create an Account</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupUsername">Username</label>
+                    <input type="text" id="signupUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+                <div class="form-group terms">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the <a href="#">Terms and Conditions</a></label>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+                <p class="form-footer">Already have an account? <a href="#" id="showLogin">Login</a></p>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Space-themed animated background -->
+    <script src="background.js"></script>
+    <!-- Add the animations script -->
+    <script src="animations.js"></script>
+    <script src="script.js"></script>
+    
+    <div id="whiteCircle"></div>
+
+<script>
+    const btn = document.getElementById("getStartedBtn");
+    const circle = document.getElementById("whiteCircle");
+    const heroImage = document.querySelector(".hero-image");
+
+    btn.addEventListener("click", () => {
+        // Animate hero image flying out to the right (5s)
+        heroImage.classList.add("fly-out");
+        // After 5s, expand the white circle (5s)
+        setTimeout(() => {
+            circle.classList.add("expand-circle");
+        }, 5000);
+        // After 10s (5s + 5s), redirect
+        setTimeout(() => {
+            window.location.href = "../Dashboard/dashboard.html";
+        }, 10000);
+    });
+</script>
+
+</body>
+</html>

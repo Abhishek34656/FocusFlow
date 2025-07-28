@@ -1,0 +1,14 @@
+/*! Animate.css v4.1.1 | MIT License | github.com/animate-css/animate.css */
+/* Only the classes needed for this project are included */
+.animate__animated { animation-duration: 1s; animation-fill-mode: both; }
+.animate__fadeIn { animation-name: fadeIn; }
+.animate__fadeInDown { animation-name: fadeInDown; }
+.animate__fadeInUp { animation-name: fadeInUp; }
+.animate__zoomIn { animation-name: zoomIn; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeInDown { from { opacity: 0; transform: translate3d(0, -100%, 0); } to { opacity: 1; transform: none; } }
+@keyframes fadeInUp { from { opacity: 0; transform: translate3d(0, 100%, 0); } to { opacity: 1; transform: none; } }
+@keyframes zoomIn { from { opacity: 0; transform: scale3d(0.3, 0.3, 0.3); } 50% { opacity: 1; } }
+.animate__delay-1s { animation-delay: 0.6s !important; }
+.animate__delay-2s { animation-delay: 1.2s !important; }
+.animate__delay-3s { animation-delay: 1.8s !important; }
